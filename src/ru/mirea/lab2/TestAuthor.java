@@ -1,7 +1,6 @@
 package ru.mirea.lab2;
 
 import java.lang.*;
-import java.util.Scanner;
 
 public class TestAuthor {
     public static void main(String[] args) {
