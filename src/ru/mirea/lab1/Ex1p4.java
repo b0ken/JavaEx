@@ -2,6 +2,11 @@ package ru.mirea.lab1;
 
 import java.util.Scanner;
 
+/*Написать программу, в результате которой массив чисел вводится
+пользователем с клавиатуры считается сумма элементов целочисленного
+массива с помощью циклов do while, while, также необходимо найти
+максимальный и минимальный элемент в массиве, результат выводится на экран.*/
+
 public class Ex1p4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

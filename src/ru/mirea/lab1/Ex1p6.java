@@ -1,5 +1,8 @@
 package ru.mirea.lab1;
 
+/*Написать программу, в результате работы которой выводятся на экран
+первые 10 чисел гармонического ряда (форматировать вывод).*/
+
 public class Ex1p6 {
     public static void main(String[] args) {
         System.out.print("The first 10 numbers of the harmonic series are: ");
