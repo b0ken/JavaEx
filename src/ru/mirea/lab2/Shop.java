@@ -5,7 +5,7 @@ import java.util.ArrayList;
 //import org.apache.commons.lang.ArrayUtils;
 
 public class Shop {
-    private ArrayList<String> computers;
+    private static ArrayList<String> computers;
 
     public Shop() {
         computers = new ArrayList<>();
@@ -36,7 +36,7 @@ public class Shop {
     }
 
     public static void main(String[] args) {
-        int choise = 3;
+        int choise = 5;
         Shop computerShop = new Shop();
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of computers: ");
@@ -48,9 +48,9 @@ public class Shop {
             computerShop.addComputer(computer);
         }
         while (choise != 0) {
-            System.out.println("\nAvailable operations: \n" + "1. Remove\n" + "2. Search\n" + "To exit, enter 0");
+            System.out.println("\nAvailable operations: \n" + "1. Add\n" + "2. Search\n" + "3. Remove\n" + "4. List of computers\n" + "To exit, enter 0");
             choise = sc.nextInt();
-            if (choise == 1) {
+            if (choise == 3) {
                 System.out.print("Enter the number of computer to remove: ");
                 int removeComp = sc.nextInt() - 1;
                 computerShop.removeComputer(removeComp);
@@ -60,6 +60,18 @@ public class Shop {
                 String searchTerm = sc.next();
                 computerShop.searchComputer(searchTerm);
             }
+            if (choise == 1) {
+                System.out.print("Enter the computer name to add: ");
+                String computer = sc.next();
+                computerShop.addComputer(computer);
+                numOfComp++;
+            }
+            if (choise == 4) {
+                for (int i = 1; i <= numOfComp; i++) {
+                    System.out.println("Computer №" + i + ": " + computers.get(i - 1));
+                }
+            }
+
         }
     }
 }
